@@ -8,8 +8,6 @@ def sequencing()
     puts "\n"
 end
 
-sequencing()
-
 # 2: Selection
 def selection()
     puts "Selection example:"
@@ -27,8 +25,6 @@ def selection()
     puts "\n"
 end
 
-selection()
-
 # 3 Iteration
 def iteration()
     puts "Iteration example:"
@@ -38,12 +34,46 @@ def iteration()
     puts "\n"
 end
 
-iteration()
-
-# 4 Procedural Abstraction
+# 4 Procedural abstraction
+#TODO
 def procedural()
-    sequencing()
+    puts "Procedural abstraction example:"
+    iteration()
     iteration()
 end
 
-procedural()
+# 5 Recursion
+def recursion()
+    puts "Recursion example:"
+    puts "Numbers represent complexity."
+    x = 100
+    y = -35
+    z = 0
+
+    10.times do
+        x = x + (rand(0..50) + y)
+        puts x.to_s
+
+        if x < z
+            puts "Error"
+        end
+    end
+end
+
+# 6 Concurrency
+# ?
+
+# 7 Exception handling and speculation
+#TODO
+def exceptionHandling()
+    x = *
+end
+
+# 8 Nondeterminacy
+# TODO
+def nondeterminacy()
+    x = gets.to_s
+    puts x
+end
+
+nondeterminacy()
