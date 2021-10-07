@@ -1,3 +1,4 @@
+# Control Flow in Ruby by Andrew Tennant
 # This Ruby file demonstrates control flow concepts
 # Info derived from Ch9 of Prog. Lang. Pragmatics: Control Flow
 
@@ -70,6 +71,9 @@ end
 # It is possible in Ruby:
 # Task A ----- Task B
 # Task A and B are ran/executed at the same time.
+# Concurrency can use multiple Processes or Threads, each having pros/cons
+# Libraries that involve concurrency include Resque and Sideqiq
+# I was unable to provide an example using only the standard libraries.
 
 # 7 Exception handling and speculation
 # nonExistant() had not been defined
@@ -79,12 +83,10 @@ def exceptionHandling
 end
 
 # 8 Nondeterminacy
-# TODO
 # Characters or integers can be input for x
 # Nondeterminacy is what makes this possible
 # x must be an integer for normal integer operations to work on it, however
 # If x is not an integer then when converted it = 0
-
 # Nondeterminacy also can make a fair choice concerning 2 statements
 def nondeterminacy
     x = gets
