@@ -1,5 +1,8 @@
 # This Ruby file demonstrates control flow concepts
+# Info derived from Ch9 of Prog. Lang. Pragmatics: Control Flow
+
 # 1: Sequencing
+# Statements are executed in the order listed.
 def sequencing()
     puts "Sequencing example:"
     puts "1"
@@ -9,6 +12,7 @@ def sequencing()
 end
 
 # 2: Selection
+# A choice is to be made among multiple options.
 def selection()
     puts "Selection example:"
     puts "Please enter an integer (Up to 100):"
@@ -26,6 +30,7 @@ def selection()
 end
 
 # 3 Iteration
+# Repeats statements until an exit condition is found
 def iteration()
     puts "Iteration example:"
     4.times do
@@ -35,14 +40,15 @@ def iteration()
 end
 
 # 4 Procedural abstraction
-#TODO
+# A collection of constructs are treated as one unit
 def procedural()
     puts "Procedural abstraction example:"
-    iteration()
+    selection()
     iteration()
 end
 
 # 5 Recursion
+# A great number is reduced to a smaller one closer to zero
 def recursion()
     puts "Recursion example:"
     puts "Numbers represent complexity."
@@ -61,19 +67,46 @@ def recursion()
 end
 
 # 6 Concurrency
-# ?
+# It is possible in Ruby:
+# Task A ----- Task B
+# Task A and B are ran/executed at the same time.
 
 # 7 Exception handling and speculation
-#TODO
-def exceptionHandling()
-    x = *
+# nonExistant() had not been defined
+# Exception handling gave the NoMethodError exception
+def exceptionHandling
+    nonExistant
 end
 
 # 8 Nondeterminacy
 # TODO
-def nondeterminacy()
-    x = gets.to_s
+# Characters or integers can be input for x
+# Nondeterminacy is what makes this possible
+# x must be an integer for normal integer operations to work on it, however
+# If x is not an integer then when converted it = 0
+
+# Nondeterminacy also can make a fair choice concerning 2 statements
+def nondeterminacy
+    x = gets
     puts x
+    puts "was input"
+    puts "\n"
+
+    x = x.to_i + 1
+    puts "Plus 1 => "
+    puts x
+
+    # Choice of statements, roughly equally likely
+    def choice
+        case rand(0..1)
+        when 0
+            puts "Option A"
+        when 1
+            puts "Option B"
+        end
+    end
+
+    choice
 end
 
-nondeterminacy()
+nondeterminacy
