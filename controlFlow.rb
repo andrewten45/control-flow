@@ -111,4 +111,10 @@ def nondeterminacy
     choice
 end
 
-nondeterminacy
+#sequencing
+#selection
+#iteration
+#procedural
+#recursion
+#exceptionHandling
+#nondeterminacy
